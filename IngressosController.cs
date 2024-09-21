@@ -17,5 +17,13 @@ public static class IngressosController
         {
             return await db.Ingresso.FindAsync(id) is Ingresso ingresso ? Results.Ok(ingresso) : Results.NotFound();
         });
+
+        RotasIngressos.MapPost("/", async (Ingresso ingresso, AppDbContext db) =>
+        {
+            db.Ingresso.Add(ingresso);
+            await db.SaveChangesAsync();
+
+            return Results.Created($"/{ingresso.Id}", ingresso);
+        });
     }
 }
