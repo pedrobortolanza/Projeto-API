@@ -25,5 +25,19 @@ public static class IngressosController
 
             return Results.Created($"/{ingresso.Id}", ingresso);
         });
+
+        RotasIngressos.MapPut("/{id}", async (int id, Ingresso ingressoAlterado, AppDbContext db) =>
+        {
+            var ingresso = await db.Ingresso.FindAsync(id);
+            if (ingresso is null) return Results.NotFound();
+
+            ingresso.NomeEvento = ingressoAlterado.NomeEvento;
+            ingresso.NomeParticipante = ingressoAlterado.NomeParticipante;
+            ingresso.DataEmissao = ingressoAlterado.DataEmissao;
+
+            await db.SaveChangesAsync();
+
+            return Results.NoContent();
+        });
     }
 }
