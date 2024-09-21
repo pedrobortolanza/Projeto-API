@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore;
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         base.OnConfiguring(optionsBuilder);
-        
-        var con = "server=localhost;port=3306;database=eventos;user=root;password=positivo";
-        optionsBuilder.UseMySQL(con);
+
+        var con = "server=localhost;port=3306;database=eventos;user=root;password=root";
+        optionsBuilder.UseMySQL(con).LogTo(Console.WriteLine, LogLevel.Information);
         
     }
         public DbSet<Ingresso> Ingresso => Set<Ingresso>();
