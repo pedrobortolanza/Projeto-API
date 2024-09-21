@@ -39,5 +39,19 @@ public static class IngressosController
 
             return Results.NoContent();
         });
+
+        RotasIngressos.MapDelete("/{id}", async (int id, AppDbContext db) =>
+        {
+            if (await db.Ingresso.FindAsync(id) is Ingresso ingresso)
+            {
+
+                db.Ingresso.Remove(ingresso);
+
+                await db.SaveChangesAsync();
+                return Results.NoContent();
+            }
+            return Results.NotFound();
+        });
     }
 }
+    
