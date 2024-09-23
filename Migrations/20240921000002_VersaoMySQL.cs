@@ -16,12 +16,12 @@ namespace EventoApi.Migrations
                 .Annotation("MySQL:Charset", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "Ingresso",
+                name: "Participantes",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
-                    NomeEvento = table.Column<string>(type: "longtext", nullable: true),
+                    CpfParticipante = table.Column<string>(type: "longtext", nullable: true),
                     NomeParticipante = table.Column<string>(type: "longtext", nullable: true),
                     DataEmissao = table.Column<DateTime>(type: "datetime(6)", nullable: false)
                 },
@@ -36,7 +36,7 @@ namespace EventoApi.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Ingresso");
+                name: "Participantes");
         }
     }
 }

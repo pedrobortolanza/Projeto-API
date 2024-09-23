@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore;
         optionsBuilder.UseMySQL(con).LogTo(Console.WriteLine, LogLevel.Information);
         
     }
-        public DbSet<Ingresso> Ingresso => Set<Ingresso>();
+        public DbSet<Participante> Participantes => Set<Participante>();
 
 }
 

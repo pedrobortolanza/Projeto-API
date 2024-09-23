@@ -18,7 +18,7 @@ namespace EventoApi.Migrations
                 .HasAnnotation("ProductVersion", "8.0.8")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("Ingresso", b =>
+            modelBuilder.Entity("Participante", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -27,7 +27,7 @@ namespace EventoApi.Migrations
                     b.Property<DateTime>("DataEmissao")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<string>("NomeEvento")
+                    b.Property<string>("CpfParticipante")
                         .HasColumnType("longtext");
 
                     b.Property<string>("NomeParticipante")
@@ -35,7 +35,7 @@ namespace EventoApi.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Ingresso");
+                    b.ToTable("Participantes");
                 });
 #pragma warning restore 612, 618
         }

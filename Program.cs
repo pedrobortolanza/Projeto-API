@@ -17,7 +17,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.AddRotasIngressos();
+app.AddRotasParticipante();
 
 app.Run();
 
