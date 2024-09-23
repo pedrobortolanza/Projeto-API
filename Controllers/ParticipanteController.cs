@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 
 public static class ParticipanteController
 {
-    public static void AddRotasParticipante(this WebApplication app)
+    public static async void AddRotasParticipante(this WebApplication app)
     {
         var RotasParticipantes = app.MapGroup("/participantes");
 
@@ -24,21 +24,32 @@ public static class ParticipanteController
             return Results.Created($"/{participante.Id}", participante);
         });
 
-        RotasParticipantes.MapPut("/{id}", async (int id, Participante ingressoAlterado, AppDbContext db) =>
+        RotasParticipantes.MapPut("/{id}", async (int id, Participante participanteAlterado, AppDbContext db) =>
         {
             var participante = await db.Participantes.FindAsync(id);
             if (participante is null) return Results.NotFound();
 
-            participante.NomeParticipante = ingressoAlterado.NomeParticipante;
-            participante.CpfParticipante = ingressoAlterado.CpfParticipante;
-            participante.DataEmissao = ingressoAlterado.DataEmissao;
+            participante.NomeParticipante = participanteAlterado.NomeParticipante;
+            participante.CpfParticipante = participanteAlterado.CpfParticipante;
+            participante.DataEmissao = participanteAlterado.DataEmissao;
 
             await db.SaveChangesAsync();
 
             return Results.NoContent();
         });
 
-        
+        RotasParticipantes.MapDelete("/{id}", async (int id, AppDbContext db) =>
+        {
+            if (await db.Participantes.FindAsync(id) is Participante participante)
+            {
+                
+                db.Participantes.Remove(participante);
+
+                await db.SaveChangesAsync();
+                return Results.NoContent();
+            }
+            return Results.NotFound();
+        });
 
     }
     
