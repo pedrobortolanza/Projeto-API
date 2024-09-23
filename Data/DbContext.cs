@@ -13,5 +13,5 @@ using Microsoft.EntityFrameworkCore;using Microsoft.EntityFrameworkCore;
         public DbSet<Ingresso> Ingresso => Set<Ingresso>();
         public DbSet<Evento> Evento => Set<Evento>();
         public DbSet<Local> Locais => Set<Local>();
-
+        
 }
