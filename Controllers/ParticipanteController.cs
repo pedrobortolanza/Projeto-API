@@ -23,7 +23,23 @@ public static class ParticipanteController
 
             return Results.Created($"/{participante.Id}", participante);
         });
+
+        RotasParticipantes.MapPut("/{id}", async (int id, Participante ingressoAlterado, AppDbContext db) =>
+        {
+            var participante = await db.Participantes.FindAsync(id);
+            if (participante is null) return Results.NotFound();
+
+            participante.NomeParticipante = ingressoAlterado.NomeParticipante;
+            participante.CpfParticipante = ingressoAlterado.CpfParticipante;
+            participante.DataEmissao = ingressoAlterado.DataEmissao;
+
+            await db.SaveChangesAsync();
+
+            return Results.NoContent();
+        });
+
         
+
     }
     
 }
