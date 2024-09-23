@@ -23,7 +23,7 @@ public static class LocaisController
 
             return Results.Created($"/{local.Id}", local);
         });
-
+       
         rotasLocais.MapPut("/{id}", async (int id, Local localAlterado, AppDbContext db) =>
         {
             var local = await db.Locais.FindAsync(id);
