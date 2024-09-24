@@ -6,7 +6,7 @@ using MySql.EntityFrameworkCore.Metadata;
 
 namespace EventoApi.Migrations
 {
-    /// <inheritdoc />
+    
     public partial class v1 : Migration
     {
         /// <inheritdoc />
