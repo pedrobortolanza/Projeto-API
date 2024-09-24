@@ -3974,19 +3974,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\MarQ - Andre\\.nuget\\packages\\": {}
+    "C:\\Users\\limaj\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MarQ - Andre\\Projeto-API\\EventoApi.csproj",
+      "projectUniqueName": "C:\\_wp\\API_Eventos_Pessoas\\Projeto-API\\EventoApi.csproj",
       "projectName": "EventoApi",
-      "projectPath": "C:\\Users\\MarQ - Andre\\Projeto-API\\EventoApi.csproj",
-      "packagesPath": "C:\\Users\\MarQ - Andre\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MarQ - Andre\\Projeto-API\\obj\\",
+      "projectPath": "C:\\_wp\\API_Eventos_Pessoas\\Projeto-API\\EventoApi.csproj",
+      "packagesPath": "C:\\Users\\limaj\\.nuget\\packages\\",
+      "outputPath": "C:\\_wp\\API_Eventos_Pessoas\\Projeto-API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\MarQ - Andre\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\limaj\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"

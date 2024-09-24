@@ -19,6 +19,7 @@ app.UseHttpsRedirection();
 
 app.AddRotasIngressos();
 app.AddRotasEventos();
+app.AddRotasParticipante();
 
 app.Run();
 

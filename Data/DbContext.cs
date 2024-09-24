@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
     }
         public DbSet<Ingresso> Ingresso => Set<Ingresso>();
         public DbSet<Evento> Evento => Set<Evento>();
+        public DbSet<Participante> Participantes => Set<Participante>();
 
 }
 
