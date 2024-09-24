@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-     public class AppDbContext : DbContext
+using Microsoft.EntityFrameworkCore;
+    public class AppDbContext : DbContext
 {
         public AppDbContext(DbContextOptions<AppDbContext> options): base(options){}
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -13,6 +14,9 @@ using Microsoft.EntityFrameworkCore;
         public DbSet<Ingresso> Ingresso => Set<Ingresso>();
         public DbSet<Evento> Evento => Set<Evento>();
         public DbSet<Participante> Participantes => Set<Participante>();
+        public DbSet<Local> Locais => Set<Local>();
 
 }
 
+        
+        
