@@ -9,7 +9,7 @@ namespace EventoApi.Migrations
     
     public partial class v1 : Migration
     {
-        /// <inheritdoc />
+        
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AlterDatabase()
