@@ -1,0 +1,139 @@
+/* index.css */
+
+/* Reset de alguns estilos para garantir consistência */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Definir um fundo suave e fonte padrão para a página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa; /* Fundo claro */
+  color: #343a40; /* Cor de texto escura */
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Container principal com centralização */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Títulos principais da aplicação */
+h1, h2 {
+  color: #007bff; /* Cor azul */
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* Adicionando um botão estilizado com o Bootstrap */
+button {
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+}
+
+button.primary-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+button.secondary-btn {
+  background-color: #6c757d;
+  color: white;
+}
+
+/* Navbar customizada */
+.navbar {
+  background-color: #007bff;
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+  color: white !important;
+}
+
+/* Estilo de tabelas */
+.table th, .table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Formulário */
+.form-group label {
+  font-weight: bold;
+}
+
+.form-control {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+/* Estilo para links */
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Cartões de conteúdo */
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.card-header {
+  background-color: #007bff;
+  color: white;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+/* Alinhamento centralizado para qualquer conteúdo */
+.centered {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 767px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .navbar {
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-container {
+    padding: 15px;
+  }
+}
